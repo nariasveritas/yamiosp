@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Configuración de la página en modo centrado para simular vista móvil
+# Configuración de la página con ancho extendido a 1080px
 st.set_page_config(
     page_title="Identidad de Marca - Yamileth Ospino",
     page_icon="",
@@ -8,7 +8,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-# Estilos CSS avanzados: Alto contraste, tipografía nítida y formato ancho móvil
+# Estilos CSS avanzados: Ancho de 1080px, alto contraste estricto en subtítulos y pestañas
 st.markdown("""
     <style>
     /* Ocultar elementos predeterminados de Streamlit */
@@ -16,13 +16,13 @@ st.markdown("""
     footer {visibility: hidden;}
     header {visibility: hidden;}
     
-    /* Forzar ancho de contenedor tipo versión móvil / app compacta */
+    /* Ajustar el ancho máximo del contenedor principal a 1080px */
     .block-container {
-        max-width: 520px !important;
-        padding-top: 1.5rem !important;
-        padding-bottom: 2rem !important;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
+        max-width: 1080px !important;
+        padding-top: 2rem !important;
+        padding-bottom: 3rem !important;
+        padding-left: 2.5rem !important;
+        padding-right: 2.5rem !important;
         background-color: #FFFFFF;
         border-radius: 12px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -30,58 +30,65 @@ st.markdown("""
         margin-bottom: 20px;
     }
     
-    /* Fondo general de la página para que resalte el contenedor móvil */
+    /* Fondo general de la aplicación */
     .stApp {
         background-color: #EDF2EE;
     }
     
-    /* Tipografía y alto contraste estricto */
+    /* Tipografía y alto contraste absoluto para texto y subtítulos */
     body, p, span, li {
         color: #111827 !important;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        font-size: 1rem;
+        font-size: 1.05rem;
         line-height: 1.6;
+    }
+    
+    /* Forzar contraste nítido en subtítulos o captions de Streamlit */
+    small, [data-testid="stCaptionContainer"] p {
+        color: #374151 !important;
+        font-weight: 700 !important;
+        font-size: 0.95rem !important;
     }
     
     /* Encabezado principal */
     .hero-container {
-        padding: 5px 0px 15px 0px;
+        padding: 10px 0px 20px 0px;
         border-bottom: 2px solid #1F2937;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         text-align: center;
     }
     .main-title {
         color: #0F172A !important;
-        font-size: 1.7rem !important;
+        font-size: 2.2rem !important;
         font-weight: 800 !important;
         letter-spacing: -0.5px;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
         text-transform: uppercase;
     }
     .sub-title {
-        color: #374151 !important;
-        font-size: 0.95rem !important;
-        font-weight: 600;
+        color: #1F2937 !important;
+        font-size: 1.1rem !important;
+        font-weight: 700;
     }
     
-    /* Pestañas horizontales limpias y de alto contraste */
+    /* Pestañas horizontales adaptadas para evitar recortes y mejorar visibilidad */
     .stTabs [data-baseweb="tab-list"] {
-        gap: 4px;
+        gap: 6px;
         background-color: #F3F4F6;
-        padding: 6px;
+        padding: 8px;
         border-radius: 8px;
-        margin-bottom: 20px;
-        overflow-x: auto;
+        margin-bottom: 25px;
+        flex-wrap: wrap;
     }
     .stTabs [data-baseweb="tab"] {
-        height: 38px;
+        height: 42px;
         background-color: #FFFFFF;
         border-radius: 6px;
         color: #1F2937 !important;
         font-weight: 700;
-        font-size: 0.85rem;
-        border: 1px solid #D1D5DB;
-        padding: 0px 12px;
+        font-size: 0.9rem;
+        border: 1px solid #9CA3AF;
+        padding: 0px 14px;
     }
     .stTabs [aria-selected="true"] {
         background-color: #111827 !important;
@@ -92,37 +99,37 @@ st.markdown("""
     /* Cajas de texto con contraste optimizado */
     .highlight-box {
         background-color: #F8FAFC;
-        padding: 18px 20px;
+        padding: 22px 24px;
         border-radius: 8px;
-        border-left: 4px solid #111827;
-        margin: 15px 0px;
+        border-left: 5px solid #111827;
+        margin: 20px 0px;
         color: #111827 !important;
-        border: 1px solid #E2E8F0;
+        border: 1px solid #CBD5E1;
     }
     
     .manifesto-box {
         background-color: #F8FAFC;
-        padding: 24px;
+        padding: 30px;
         border-radius: 8px;
         font-style: italic;
         color: #111827 !important;
-        line-height: 1.7;
-        border: 1px solid #E2E8F0;
+        line-height: 1.8;
+        border: 1px solid #CBD5E1;
     }
     
     /* Títulos de sección con alta visibilidad */
     h2 {
         color: #0F172A !important;
-        font-size: 1.35rem !important;
+        font-size: 1.5rem !important;
         font-weight: 800 !important;
-        margin-top: 10px !important;
-        margin-bottom: 12px !important;
+        margin-top: 15px !important;
+        margin-bottom: 15px !important;
     }
     h3 {
         color: #1E293B !important;
-        font-size: 1.1rem !important;
+        font-size: 1.2rem !important;
         font-weight: 700 !important;
-        margin-top: 15px !important;
+        margin-top: 20px !important;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -135,11 +142,11 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
-# --- MENÚ HORIZONTAL EN PESTAÑAS (SIN EMOJIS) ---
+# --- MENÚ HORIZONTAL EN PESTAÑAS ---
 tabs = st.tabs([
     "Inicio",
     "Hallazgo",
-    "Visión/Misión",
+    "Visión y Misión",
     "Valores",
     "Personalidad",
     "Territorio",
