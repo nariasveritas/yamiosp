@@ -1,14 +1,14 @@
 import streamlit as st
 
-# Configuración de la página
+# Configuración de la página en modo centrado para simular vista móvil
 st.set_page_config(
     page_title="Identidad de Marca - Yamileth Ospino",
-    page_icon="🌱",
-    layout="wide",
+    page_icon="",
+    layout="centered",
     initial_sidebar_state="collapsed",
 )
 
-# Estilos CSS avanzados para alta legibilidad y pestañas horizontales limpias (Sin emojis)
+# Estilos CSS avanzados: Alto contraste, tipografía nítida y formato ancho móvil
 st.markdown("""
     <style>
     /* Ocultar elementos predeterminados de Streamlit */
@@ -16,93 +16,113 @@ st.markdown("""
     footer {visibility: hidden;}
     header {visibility: hidden;}
     
-    /* Tipografía y contenedor general */
-    body {
-        color: #1A2420;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* Forzar ancho de contenedor tipo versión móvil / app compacta */
+    .block-container {
+        max-width: 520px !important;
+        padding-top: 1.5rem !important;
+        padding-bottom: 2rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        background-color: #FFFFFF;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
-    /* Encabezado principal estilo marca de lujo / editorial */
+    /* Fondo general de la página para que resalte el contenedor móvil */
+    .stApp {
+        background-color: #EDF2EE;
+    }
+    
+    /* Tipografía y alto contraste estricto */
+    body, p, span, li {
+        color: #111827 !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    /* Encabezado principal */
     .hero-container {
-        padding: 10px 0px 20px 0px;
-        border-bottom: 2px solid #2D3A34;
-        margin-bottom: 25px;
+        padding: 5px 0px 15px 0px;
+        border-bottom: 2px solid #1F2937;
+        margin-bottom: 20px;
+        text-align: center;
     }
     .main-title {
-        color: #1E2B25;
-        font-size: 2.4rem;
-        font-weight: 700;
+        color: #0F172A !important;
+        font-size: 1.7rem !important;
+        font-weight: 800 !important;
         letter-spacing: -0.5px;
         margin-bottom: 4px;
         text-transform: uppercase;
     }
     .sub-title {
-        color: #4A5D52;
-        font-size: 1.15rem;
-        font-weight: 500;
+        color: #374151 !important;
+        font-size: 0.95rem !important;
+        font-weight: 600;
     }
     
-    /* Estilo de Pestañas Horizontales (Legibles y sin recargar) */
+    /* Pestañas horizontales limpias y de alto contraste */
     .stTabs [data-baseweb="tab-list"] {
-        gap: 6px;
-        background-color: #F4F6F4;
-        padding: 8px;
+        gap: 4px;
+        background-color: #F3F4F6;
+        padding: 6px;
         border-radius: 8px;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
+        overflow-x: auto;
     }
     .stTabs [data-baseweb="tab"] {
-        height: 42px;
+        height: 38px;
         background-color: #FFFFFF;
         border-radius: 6px;
-        color: #2D3A34;
-        font-weight: 600;
-        font-size: 0.92rem;
-        border: 1px solid #D8E0D9;
-        padding: 0px 16px;
+        color: #1F2937 !important;
+        font-weight: 700;
+        font-size: 0.85rem;
+        border: 1px solid #D1D5DB;
+        padding: 0px 12px;
     }
     .stTabs [aria-selected="true"] {
-        background-color: #2D3A34 !important;
+        background-color: #111827 !important;
         color: #FFFFFF !important;
-        border-color: #2D3A34 !important;
+        border-color: #111827 !important;
     }
     
-    /* Cajas resaltadas para conceptos clave */
+    /* Cajas de texto con contraste optimizado */
     .highlight-box {
-        background-color: #F7F9F7;
-        padding: 22px 26px;
+        background-color: #F8FAFC;
+        padding: 18px 20px;
         border-radius: 8px;
-        border-left: 4px solid #2D3A34;
-        margin: 20px 0px;
-        color: #1A2420;
-        font-size: 1.05rem;
-        line-height: 1.6;
+        border-left: 4px solid #111827;
+        margin: 15px 0px;
+        color: #111827 !important;
+        border: 1px solid #E2E8F0;
     }
     
-    /* Caja de manifiesto */
     .manifesto-box {
-        background-color: #F5F7F5;
-        padding: 35px;
+        background-color: #F8FAFC;
+        padding: 24px;
         border-radius: 8px;
         font-style: italic;
-        color: #1A2420;
-        line-height: 1.8;
-        font-size: 1.05rem;
-        border: 1px solid #E2E8E4;
+        color: #111827 !important;
+        line-height: 1.7;
+        border: 1px solid #E2E8F0;
     }
     
-    /* Jerarquía de encabezados dentro de las secciones */
+    /* Títulos de sección con alta visibilidad */
     h2 {
-        color: #1E2B25 !important;
-        font-size: 1.6rem !important;
-        font-weight: 700 !important;
-        margin-top: 15px !important;
-        margin-bottom: 15px !important;
+        color: #0F172A !important;
+        font-size: 1.35rem !important;
+        font-weight: 800 !important;
+        margin-top: 10px !important;
+        margin-bottom: 12px !important;
     }
     h3 {
-        color: #3B4E43 !important;
-        font-size: 1.25rem !important;
-        font-weight: 600 !important;
-        margin-top: 20px !important;
+        color: #1E293B !important;
+        font-size: 1.1rem !important;
+        font-weight: 700 !important;
+        margin-top: 15px !important;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -110,23 +130,23 @@ st.markdown("""
 # --- ENCABEZADO PRINCIPAL ---
 st.markdown("""
     <div class="hero-container">
-        <h1 class="main-title">IDENTIDAD DE MARCA</h1>
-        <p class="sub-title">Yamileth Ospino &nbsp;|&nbsp; Psicología y acompañamiento a lo largo de la vida</p>
+        <h1 class="main-title">Identidad de Marca</h1>
+        <p class="sub-title">Yamileth Ospino | Psicología</p>
     </div>
 """, unsafe_allow_html=True)
 
 # --- MENÚ HORIZONTAL EN PESTAÑAS (SIN EMOJIS) ---
 tabs = st.tabs([
-    "Vista General",
-    "01. Hallazgo",
-    "02. Visión y Misión",
-    "03. Valores",
-    "04. Personalidad",
-    "05. Territorio",
-    "06. Manifiesto",
-    "07. Posicionamiento",
-    "08. Tono y Lenguaje",
-    "09. Síntesis"
+    "Inicio",
+    "Hallazgo",
+    "Visión/Misión",
+    "Valores",
+    "Personalidad",
+    "Territorio",
+    "Manifiesto",
+    "Posicionamiento",
+    "Tono",
+    "Síntesis"
 ])
 
 # --- 0. VISTA GENERAL ---
@@ -145,13 +165,11 @@ with tabs[0]:
     )
     
     st.subheader("Estructura de la plataforma")
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.markdown("**Fundamentos**\n- 01. Hallazgo estratégico\n- 02. Visión y misión\n- 03. Valores de marca")
-    with col2:
-        st.markdown("**Identidad**\n- 04. Personalidad de marca\n- 05. Territorio conceptual\n- 06. Manifiesto de marca")
-    with col3:
-        st.markdown("**Expresión**\n- 07. Posicionamiento\n- 08. Tono y lenguaje\n- 09. Síntesis")
+    st.markdown("""
+    * **Fundamentos:** Hallazgo, Visión, Misión, Valores.
+    * **Identidad:** Personalidad, Territorio, Manifiesto.
+    * **Expresión:** Posicionamiento, Tono y Síntesis.
+    """)
 
 # --- 01. HALLAZGO ESTRATÉGICO ---
 with tabs[1]:
@@ -164,13 +182,12 @@ with tabs[1]:
     )
     
     st.subheader("Los cuatro pilares")
-    col1, col2 = st.columns(2)
-    with col1:
-        st.info("**Escucha sin juicio:** Crear un espacio en el que la persona pueda expresarse con confianza y respeto.")
-        st.info("**Conocimiento profesional:** Sostener el acompañamiento en preparación, actualización y responsabilidad ética.")
-    with col2:
-        st.info("**Autonomía y orientación:** Facilitar comprensión y herramientas, sin imponer respuestas ni decidir por la persona.")
-        st.info("**Prevención y continuidad:** Reconocer que el cuidado psicológico puede ser relevante antes de una crisis y a lo largo de la vida.")
+    st.markdown("""
+    * **Escucha sin juicio:** Crear un espacio en el que la persona pueda expresarse con confianza y respeto.
+    * **Conocimiento profesional:** Sostener el acompañamiento en preparación, actualización y responsabilidad ética.
+    * **Autonomía y orientación:** Facilitar comprensión y herramientas, sin imponer respuestas ni decidir por la persona.
+    * **Prevención y continuidad:** Reconocer que el cuidado psicológico puede ser relevante antes de una crisis y a lo largo de la vida.
+    """)
 
 # --- 02. VISIÓN Y MISIÓN ---
 with tabs[2]:
