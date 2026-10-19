@@ -91,7 +91,6 @@ st.markdown("""
         padding: 0px 14px;
     }
     .stTabs [aria-selected="true"] {
-        background-color: #111827 !important;
         color: #FFFFFF !important;
         border-color: #111827 !important;
     }
