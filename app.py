@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Configuración de la página con ancho extendido a 1080px
+# Configuración de la página con ancho de 1080px
 st.set_page_config(
     page_title="Identidad de Marca - Yamileth Ospino",
     page_icon="",
@@ -8,127 +8,139 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-# Estilos CSS avanzados: Ancho de 1080px, alto contraste estricto en subtítulos y pestañas
+# Estilos CSS avanzados: Tipografía estilizada, jerarquía refinada y sin la regla de pestañas solicitada
 st.markdown("""
     <style>
+    /* Importar fuente editorial sofisticada de Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
     /* Ocultar elementos predeterminados de Streamlit */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
     
-    /* Ajustar el ancho máximo del contenedor principal a 1080px */
+    /* Contenedor principal a 1080px */
     .block-container {
         max-width: 1080px !important;
-        padding-top: 2rem !important;
-        padding-bottom: 3rem !important;
-        padding-left: 2.5rem !important;
-        padding-right: 2.5rem !important;
+        padding-top: 2.5rem !important;
+        padding-bottom: 3.5rem !important;
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
         background-color: #FFFFFF;
         border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        margin-top: 20px;
-        margin-bottom: 20px;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04);
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
     
-    /* Fondo general de la aplicación */
+    /* Fondo general */
     .stApp {
-        background-color: #EDF2EE;
+        background-color: #F4F7F4;
     }
     
-    /* Tipografía y alto contraste absoluto para texto y subtítulos */
+    /* Tipografía base más estilizada */
     body, p, span, li {
-        color: #111827 !important;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: #26332E !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
         font-size: 1.05rem;
-        line-height: 1.6;
+        font-weight: 400;
+        line-height: 1.7;
     }
     
-    /* Forzar contraste nítido en subtítulos o captions de Streamlit */
+    /* Subtítulos pequeños y captions con contraste y estilo */
     small, [data-testid="stCaptionContainer"] p {
-        color: #374151 !important;
-        font-weight: 700 !important;
-        font-size: 0.95rem !important;
+        color: #4A5D53 !important;
+        font-weight: 600 !important;
+        font-size: 0.9rem !important;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
     
     /* Encabezado principal */
     .hero-container {
         padding: 10px 0px 20px 0px;
-        border-bottom: 2px solid #1F2937;
-        margin-bottom: 25px;
+        border-bottom: 2px solid #2D3A34;
+        margin-bottom: 30px;
         text-align: center;
     }
     .main-title {
-        color: #0F172A !important;
-        font-size: 2.2rem !important;
-        font-weight: 800 !important;
+        color: #1A2420 !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: 2.3rem !important;
+        font-weight: 700 !important;
         letter-spacing: -0.5px;
         margin-bottom: 6px;
         text-transform: uppercase;
     }
     .sub-title {
-        color: #1F2937 !important;
+        color: #4A5D53 !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
         font-size: 1.1rem !important;
-        font-weight: 700;
+        font-weight: 500;
+        letter-spacing: 0.3px;
     }
     
-    /* Pestañas horizontales adaptadas para evitar recortes y mejorar visibilidad */
+    /* Pestañas horizontales limpias (sin la regla de selección anterior) */
     .stTabs [data-baseweb="tab-list"] {
         gap: 6px;
-        background-color: #F3F4F6;
+        background-color: #EEF2EE;
         padding: 8px;
         border-radius: 8px;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         flex-wrap: wrap;
     }
     .stTabs [data-baseweb="tab"] {
         height: 42px;
         background-color: #FFFFFF;
         border-radius: 6px;
-        color: #1F2937 !important;
-        font-weight: 700;
+        color: #2D3A34 !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-weight: 600;
         font-size: 0.9rem;
-        border: 1px solid #9CA3AF;
-        padding: 0px 14px;
-    }
-    .stTabs [aria-selected="true"] {
-        color: #FFFFFF !important;
-        border-color: #111827 !important;
+        border: 1px solid #D1DCD5;
+        padding: 0px 16px;
     }
     
-    /* Cajas de texto con contraste optimizado */
+    /* Cajas y contenedores */
     .highlight-box {
-        background-color: #F8FAFC;
-        padding: 22px 24px;
+        background-color: #F8FAF8;
+        padding: 24px 28px;
         border-radius: 8px;
-        border-left: 5px solid #111827;
+        border-left: 4px solid #2D3A34;
         margin: 20px 0px;
-        color: #111827 !important;
-        border: 1px solid #CBD5E1;
+        color: #1A2420 !important;
+        border-top: 1px solid #E2E8E4;
+        border-right: 1px solid #E2E8E4;
+        border-bottom: 1px solid #E2E8E4;
     }
     
     .manifesto-box {
-        background-color: #F8FAFC;
-        padding: 30px;
+        background-color: #F8FAF8;
+        padding: 35px;
         border-radius: 8px;
         font-style: italic;
-        color: #111827 !important;
-        line-height: 1.8;
-        border: 1px solid #CBD5E1;
+        color: #1A2420 !important;
+        line-height: 1.9;
+        border: 1px solid #E2E8E4;
     }
     
-    /* Títulos de sección con alta visibilidad */
+    /* Jerarquía estricta de Títulos */
     h2 {
-        color: #0F172A !important;
-        font-size: 1.5rem !important;
-        font-weight: 800 !important;
-        margin-top: 15px !important;
-        margin-bottom: 15px !important;
-    }
-    h3 {
-        color: #1E293B !important;
-        font-size: 1.2rem !important;
+        color: #1A2420 !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: 1.6rem !important;
         font-weight: 700 !important;
         margin-top: 20px !important;
+        margin-bottom: 15px !important;
+        letter-spacing: -0.3px;
+    }
+    h3 {
+        color: #2D3A34 !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: 1.25rem !important;
+        font-weight: 600 !important;
+        margin-top: 25px !important;
+        margin-bottom: 10px !important;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -137,7 +149,7 @@ st.markdown("""
 st.markdown("""
     <div class="hero-container">
         <h1 class="main-title">Identidad de Marca</h1>
-        <p class="sub-title">Yamileth Ospino | Psicología</p>
+        <p class="sub-title">Yamileth Ospino &nbsp;|&nbsp; Psicología</p>
     </div>
 """, unsafe_allow_html=True)
 
