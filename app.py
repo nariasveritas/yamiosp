@@ -193,7 +193,7 @@ with tabs[0]:
 with tabs[1]:
     st.header("01. Hallazgo estratégico")
     st.write(
-        "Yamileth entiende la psicología no únicamente como una intervención cuando aparece un problema, "
+        "La marca entiende la psicología no únicamente como una intervención cuando aparece un problema, "
         "sino como un **acompañamiento** que puede aportar en distintas etapas y circunstancias de la vida. "
         "La propuesta combina **escucha sin juicio**, preparación profesional, orientación y herramientas para que "
         "cada persona pueda comprender mejor lo que vive y tomar sus propias decisiones."
@@ -300,7 +300,7 @@ with tabs[7]:
     st.subheader("Declaración de posicionamiento propuesta")
     st.markdown("""
     <div class="highlight-box">
-        Para las personas que buscan comprender lo que están viviendo y desarrollar herramientas para afrontar los desafíos de la vida, <b>Yamileth Ospino ofrece acompañamiento psicológico cercano, profesional y fundamentado en el conocimiento</b>, que combina escucha sin juicio, orientación y una visión integral de la persona.
+        Para las personas que buscan comprender lo que están viviendo y desarrollar herramientas para afrontar los desafíos de la vida, <b>La marca ofrece acompañamiento psicológico cercano, profesional y fundamentado en el conocimiento</b>, que combina escucha sin juicio, orientación y una visión integral de la persona.
     </div>
     """, unsafe_allow_html=True)
     
