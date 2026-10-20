@@ -42,7 +42,7 @@ st.markdown("""
     body, p, span, li {
         color: #26332E !important;
         font-family: 'Plus Jakarta Sans', sans-serif !important;
-        font-size: 15px;   /* 1.05rem */
+        /*font-size: 15px;*/
         font-weight: 400;
         line-height: 1.7;
     }
@@ -84,7 +84,6 @@ st.markdown("""
     .stTabs [data-baseweb="tab-list"] {
         gap: 6px;
         background-color: #EEF2EE;
-        font-size: 1.1rem !important;
         padding: 8px;
         border-radius: 8px;
         margin-bottom: 30px;
