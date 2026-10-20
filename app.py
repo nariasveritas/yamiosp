@@ -182,12 +182,6 @@ with tabs[0]:
         "y la futura expresión visual y verbal de la marca."
     )
     
-    st.subheader("Estructura de la plataforma")
-    st.markdown("""
-    * **Fundamentos:** Hallazgo, Visión, Misión, Valores.
-    * **Identidad:** Personalidad, Territorio, Manifiesto.
-    * **Expresión:** Posicionamiento, Tono y Síntesis.
-    """)
 
 # --- 01. HALLAZGO ESTRATÉGICO ---
 with tabs[1]:
