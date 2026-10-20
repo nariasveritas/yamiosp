@@ -96,7 +96,7 @@ st.markdown("""
         color: #2D3A34 !important;
         font-family: 'Plus Jakarta Sans', sans-serif !important;
         font-weight: bold;
-        font-size: 1rem;
+        font-size: 2rem;
         border: 1px solid #D1DCD5;
         padding: 0px 16px;
     }
