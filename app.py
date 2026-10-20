@@ -42,8 +42,8 @@ st.markdown("""
     body, p, span, li {
         color: #26332E !important;
         font-family: 'Plus Jakarta Sans', sans-serif !important;
-        font-size: 16px;   /* 1.05rem */
-        font-weight: bold;
+        font-size: 15px;   /* 1.05rem */
+        font-weight: 400;
         line-height: 1.7;
     }
     
