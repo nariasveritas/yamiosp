@@ -50,8 +50,8 @@ st.markdown("""
     /* Subtítulos pequeños y captions con contraste y estilo */
     small, [data-testid="stCaptionContainer"] p {
         color: #4A5D53 !important;
-        font-weight: 600 !important;
-        font-size: 0.9rem !important;
+        font-weight: bold !important;
+        font-size: 14px !important;
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
