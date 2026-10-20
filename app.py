@@ -66,7 +66,7 @@ st.markdown("""
     .main-title {
         color: #1A2420 !important;
         font-family: 'Plus Jakarta Sans', sans-serif !important;
-        font-size: 1.5rem !important;
+        font-size: 1.8rem !important;
         font-weight: 700 !important;
         letter-spacing: -0.5px;
         margin-bottom: 6px;
@@ -75,7 +75,7 @@ st.markdown("""
     .sub-title {
         color: #4A5D53 !important;
         font-family: 'Plus Jakarta Sans', sans-serif !important;
-        font-size: 1.1rem !important;
+        font-size: 1.2rem !important;
         font-weight: 500;
         letter-spacing: 0.3px;
     }
