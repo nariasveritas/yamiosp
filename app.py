@@ -160,7 +160,7 @@ tabs = st.tabs([
     "Visión y Misión",
     "Valores",
     "Personalidad",
-    "Territorio",
+    "Concepto",
     "Manifiesto",
     "Posicionamiento",
     "Tono",
@@ -198,7 +198,7 @@ with tabs[1]:
     * **Escucha sin juicio:** Crear un espacio en el que la persona pueda expresarse con confianza y respeto.
     * **Conocimiento profesional:** Sostener el acompañamiento en preparación, actualización y responsabilidad ética.
     * **Autonomía y orientación:** Facilitar comprensión y herramientas, sin imponer respuestas ni decidir por la persona.
-    * **Prevención y continuidad:** Reconocer que el cuidado psicológico puede ser relevante antes de una crisis y a lo largo de la vida.
+    * **Prevención y continuidad:** Reconocer que el cuidado de la salud mental puede ser relevante antes de una crisis y a lo largo de la vida.
     """)
 
 # --- 02. VISIÓN Y MISIÓN ---
@@ -217,7 +217,7 @@ with tabs[2]:
     st.caption("Qué ofrece y cómo lo hace")
     st.markdown("""
     <div class="highlight-box">
-        Brindar <b>acompañamiento psicológico profesional, empático y basado en evidencia</b>, que permita a las personas comprender sus pensamientos y emociones, afrontar los desafíos de las distintas etapas de la vida y desarrollar herramientas para tomar sus propias decisiones y mejorar su bienestar.
+        Brindar <b>acompañamiento psicológico profesional, empático y basado en evidencia</b>, que permita a las personas comprender sus pensamientos, emociones y conductas, afrontar los desafíos de las distintas etapas de la vida y desarrollar herramientas para tomar sus propias decisiones y mejorar su bienestar.
     </div>
     """, unsafe_allow_html=True)
 
@@ -228,7 +228,7 @@ with tabs[3]:
     * **Empatía y respeto:** Escuchar con atención, reconocer la historia de cada persona y *evitar juicios o etiquetas*.
     * **Ética y autonomía:** Cuidar la confidencialidad y los límites profesionales, *respetando la capacidad de cada persona para decidir*.
     * **Rigor y aprendizaje continuo:** Mantener una práctica responsable, *fundamentada en el conocimiento* y abierta a la actualización.
-    * **Autonomía y empoderamiento:** Ofrecer orientación y herramientas para que las personas *comprendan su situación* y tomen decisiones propias.
+    * **Independencia y empoderamiento:** Ofrecer orientación y herramientas para que las personas *comprendan su situación* y tomen decisiones propias.
     * **Prevención y continuidad:** Promover una mirada del bienestar psicológico que *no se limite a responder a una crisis puntual*.
     """)
 
@@ -240,26 +240,26 @@ with tabs[4]:
         "La cercanía transmite seguridad sin borrar los límites del vínculo profesional."
     )
     st.markdown("""
-    * **Cercana, no excesivamente informal:** Humana y accesible, *sin confundirse con una relación de amistad*.
-    * **Científica, no fría:** Demuestra preparación y criterio, *explicando con claridad y sensibilidad*.
-    * **Reflexiva, no impositiva:** Invita a comprender y explorar, *sin decirle a la persona cómo debe vivir*.
-    * **Profesional, no rígida:** Transmite confianza y estructura *sin recurrir a un lenguaje institucional distante*.
+    * **Cercana:** Humana y accesible, *sin confundirse con una relación de amistad*.
+    * **Científica:** Demuestra preparación y criterio, *explicando con claridad y sensibilidad*.
+    * **Reflexiva:** Invita a comprender y explorar, *sin decirle a la persona cómo debe vivir*.
+    * **Profesional:** Transmite confianza y estructura *sin recurrir a un lenguaje institucional distante*.
     * **Metódica y contemporánea:** Proyecta orden, actualización y *apertura a distintas realidades*.
     """)
 
-# --- 05. TERRITORIO CONCEPTUAL ---
+# --- 05. CONCEPTO ---
 with tabs[5]:
-    st.header("05. Territorio conceptual")
+    st.header("05. Concepto")
     
-    st.subheader("Territorio principal recomendado")
+    st.subheader("Principal")
     st.markdown("""
     <div class="highlight-box">
         <b>El bienestar se construye a lo largo de la vida</b><br>
-        <i>Este territorio permite hablar de desarrollo, cambios, prevención, aprendizaje y continuidad. Amplía la percepción de la psicología más allá de la crisis y da coherencia a una práctica que acompaña distintas etapas.</i>
+        <i>Este concepto permite hablar de desarrollo, cambios, prevención, aprendizaje y continuidad. Amplía la percepción de la psicología más allá de la crisis y da coherencia a una práctica que acompaña distintas etapas.</i>
     </div>
     """, unsafe_allow_html=True)
     
-    st.subheader("Territorios complementarios")
+    st.subheader("Complementarios")
     st.markdown("""
     * **Un espacio para comprender y avanzar:** Expresa la experiencia que la persona puede encontrar: *escucha, confianza, claridad, herramientas y autonomía*.
     * **Ciencia que acompaña:** Comunica la unión entre *conocimiento profesional, humanidad y confianza*.
@@ -282,7 +282,7 @@ with tabs[6]:
         Creemos que cuidar la salud mental no debería ser el último recurso cuando sentimos que ya no podemos más. Todas las personas atraviesan cambios, decisiones y momentos que pueden transformar su manera de pensar, sentir y vivir. No tenemos que recorrerlos sin apoyo.<br><br>
         Acompañar no significa decirle a alguien cómo vivir. Significa escuchar sin juzgar, comprender su historia, ofrecer herramientas y ayudarle a encontrar claridad para tomar sus propias decisiones.<br><br>
         Creemos en una psicología profesional, fundamentada en el conocimiento y ejercida con empatía, respeto y responsabilidad. Una psicología que reconoce a la persona más allá de sus dificultades y que comprende que su bienestar también está relacionado con su historia, su entorno y sus vínculos.<br><br>
-        Queremos contribuir a que pedir ayuda sea una posibilidad y no un motivo de vergüenza; a que el cuidado psicológico pueda comenzar antes de una crisis y continuar a lo largo de la vida.<br><br>
+        Queremos contribuir a que pedir ayuda sea una posibilidad y no un motivo de vergüenza; a que el cuidado de la salud mental pueda comenzar antes de una crisis y continuar a lo largo de la vida.<br><br>
         Porque cada persona merece ser escuchada, comprendida y acompañada con respeto.<br><br>
         <b>El bienestar también se construye. Y no tenemos que hacerlo a solas.</b>”
     </div>
